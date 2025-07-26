@@ -38,3 +38,16 @@ footer {
   text-align: center;
   padding: 10px;
 }
+/* Modo claro (padrão) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Modo escuro detectado pelo sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+}
