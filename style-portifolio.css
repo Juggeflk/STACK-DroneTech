@@ -114,3 +114,17 @@ footer {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+/* Modo claro (padrão) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Modo escuro detectado pelo sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+}
