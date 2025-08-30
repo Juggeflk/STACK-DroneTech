@@ -1,4 +1,54 @@
-document.addEventListener('DOMContentLoaded', () => {
+[04:17, 30/08/2025] Ssitoe: /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f9f9f9;
+  --text: #333;
+  --primary: #0077cc;
+  --card: white;
+  --overlay: rgba(0, 0, 0, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --primary: #1e90ff;
+    --card: #1e1e1e;
+    --overlay: rgba(0, 0, 0, 0.9);
+  }
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), #1e90ff);
+  color: white;
+  padding: 30px 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  d…
+[04:17, 30/08/2025] Ssitoe: document.addEventListener('DOMContentLoaded', () => {
     // Filtros
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
