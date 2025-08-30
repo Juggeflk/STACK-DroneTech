@@ -258,3 +258,35 @@ footer {
     text-align: center;
   }
 }
+
+/* Navegação */
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffd700;
+}
+
+/* Rolagem Suave */
+html {
+  scroll-behavior: smooth;
+}
+
