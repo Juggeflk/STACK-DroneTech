@@ -1,148 +1,260 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio da STACK DroneTech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style-portifolio.css">
-    <script src="https://kit.fontawesome.com/a2d9a20e8d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#missao">Missão</a></li>
-                <li><a href="#visao">Visão</a></li>
-                <li><a href="#valores">Valores</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <h1>STACK DroneTech</h1>
-        <p>FILMAGENS AÉREAS INTELIGENTES E CRIATIVAS</p>
-    </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <main>
-        <!-- Seção Sobre -->
-        <section id="sobre" class="section">
-            <div class="container py-5">
-                <h2>Sobre a Empresa</h2>
-                <p>Conteúdo sobre a empresa...</p>
-            </div>
-        </section>
+:root {
+  --bg: #f9f9f9;
+  --text: #333;
+  --primary: #0077cc;
+  --card: white;
+  --overlay: rgba(0, 0, 0, 0.7);
+}
 
-        <!-- Seção Missão -->
-        <section id="missao" class="section">
-            <div class="container py-5">
-                <h2>Missão</h2>
-                <p>Conteúdo sobre a missão...</p>
-            </div>
-        </section>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --primary: #1e90ff;
+    --card: #1e1e1e;
+    --overlay: rgba(0, 0, 0, 0.9);
+  }
+}
 
-        <!-- Seção Visão -->
-        <section id="visao" class="section">
-            <div class="container py-5">
-                <h2>Visão</h2>
-                <p>Conteúdo sobre a visão...</p>
-            </div>
-        </section>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  line-height: 1.6;
+}
 
-        <!-- Seção Valores -->
-        <section id="valores" class="section">
-            <div class="container py-5">
-                <h2>Valores</h2>
-                <ul>
-                    <li>Inovação constante</li>
-                    <li>Qualidade e profissionalismo</li>
-                    <li>Segurança nas operações</li>
-                    <li>Compromisso com o cliente</li>
-                    <li>Criatividade visual</li>
-                </ul>
-            </div>
-        </section>
+header {
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), #1e90ff);
+  color: white;
+  padding: 30px 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
 
-        <!-- Seção Serviços -->
-        <section id="servicos" class="section">
-            <div class="container py-5">
-                <h2>Serviços Oferecidos</h2>
-                <ul>
-                    <li>📽️ Produções Audiovisuais</li>
-                    <li>🏡 Imagens Imobiliárias</li>
-                    <li>🎉 Eventos Especiais</li>
-                    <li>🏗️ Obras e Engenharia</li>
-                    <li>🌿 Turismo e Natureza</li>
-                </ul>
-            </div>
-        </section>
+nav {
+  margin-bottom: 20px;
+}
 
-        <!-- Seção Portfólio (já existente) -->
-        <section id="portfolio" class="section">
-            <div class="container py-5">
-                <h2 class="text-center mb-5">Portfólio</h2>
-                <p class="text-center mb-4">Explore nossos trabalhos recentes em produções aéreas, vídeos institucionais, eventos e paisagens.</p>
-                <div class="text-center mb-4">
-                    <button class="btn btn-outline-primary m-1 filter-btn" data-filter="all">Todos</button>
-                    <button class="btn btn-outline-primary m-1 filter-btn" data-filter="eventos">Eventos</button>
-                    <button class="btn btn-outline-primary m-1 filter-btn" data-filter="imobiliario">Imobiliário</button>
-                    <button class="btn btn-outline-primary m-1 filter-btn" data-filter="turismo">Turismo</button>
-                    <button class="btn btn-outline-primary m-1 filter-btn" data-filter="institucional">Institucional</button>
-                </div>
-                <div class="row g-4 portfolio-grid">
-                    <!-- Itens do portfólio (mantidos como no código anterior) -->
-                    <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" data-category="eventos" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="image" data-src="portfolio/img/evento1.jpg">
-                        <div class="portfolio-card">
-                            <img src="portfolio/img/evento1.jpg" class="img-fluid rounded shadow-sm" alt="Evento 1">
-                            <div class="overlay">
-                                <p class="text-white">Evento 1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Outros itens... -->
-                </div>
-            </div>
-        </section>
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-        <!-- Seção Contato -->
-        <section id="contato" class="section">
-            <div class="container py-5">
-                <h2>Fale Conosco</h2>
-                <p><strong>Localização:</strong> Beira/Sofala</p>
-                <p><strong>Telefone:</strong> <a href="tel:+258834235008">(+258) 83 4235-008</a></p>
-                <p><strong>Email:</strong> <a href="mailto:stackdronetech@gmail.com">stackdronetech@gmail.com</a></p>
-                <div class="social-buttons">
-                    <a href="https://www.instagram.com/stack_dronetech/" class="social instagram" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <!-- Outros botões sociais... -->
-                </div>
-            </div>
-        </section>
-    </main>
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-    <!-- Modal Lightbox -->
-    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark">
-                <div class="modal-body p-0">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"></button>
-                    <img id="modalImage" src="" class="img-fluid w-100 d-none">
-                    <video id="modalVideo" controls class="w-100 d-none">
-                        <source id="modalVideoSource" src="" type="video/mp4">
-                        Seu navegador não suporta vídeo.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
+nav ul li a:hover {
+  color: #ffd700;
+}
 
-    <footer>
-        <p>&copy; 2025 STACK DroneTech. Todos os direitos reservados.</p>
-    </footer>
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: var(--primary);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+main section {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Portfólio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.filter-btn {
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Modal */
+.modal-content {
+  border: none;
+  border-radius: 10px;
+}
+
+#modalVideo, #modalImage {
+  max-height: 80vh;
+}
+
+#modalVideo {
+  background: #000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Botões sociais com ícones */
+.social-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 10px 0 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.social.instagram { background: #C13584; }
+.social.youtube { background: #FF0000; }
+.social.facebook { background: #3b5998; }
+.social.linkedin { background: #0077b5; }
+.social.whatsapp { background: #25d366; }
+
+.social:hover {
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .social {
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    text-align: center;
+  }
+}
