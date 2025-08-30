@@ -1,4 +1,3 @@
-// Scripts futuros para o site STACK DroneTech
 document.addEventListener('DOMContentLoaded', () => {
     // Filtros
     const filterButtons = document.querySelectorAll('.filter-btn');
