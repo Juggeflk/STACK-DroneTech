@@ -1,4 +1,4 @@
-[04:17, 30/08/2025] Ssitoe: /* Reset */
+ /* Reset */
 * {
   margin: 0;
   padding: 0;
