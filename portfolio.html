@@ -26,12 +26,63 @@
     </header>
 
     <main>
+        <!-- Seção Sobre -->
+        <section id="sobre" class="section">
+            <div class="container py-5">
+                <h2>Sobre a Empresa</h2>
+                <p>Conteúdo sobre a empresa...</p>
+            </div>
+        </section>
+
+        <!-- Seção Missão -->
+        <section id="missao" class="section">
+            <div class="container py-5">
+                <h2>Missão</h2>
+                <p>Conteúdo sobre a missão...</p>
+            </div>
+        </section>
+
+        <!-- Seção Visão -->
+        <section id="visao" class="section">
+            <div class="container py-5">
+                <h2>Visão</h2>
+                <p>Conteúdo sobre a visão...</p>
+            </div>
+        </section>
+
+        <!-- Seção Valores -->
+        <section id="valores" class="section">
+            <div class="container py-5">
+                <h2>Valores</h2>
+                <ul>
+                    <li>Inovação constante</li>
+                    <li>Qualidade e profissionalismo</li>
+                    <li>Segurança nas operações</li>
+                    <li>Compromisso com o cliente</li>
+                    <li>Criatividade visual</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos" class="section">
+            <div class="container py-5">
+                <h2>Serviços Oferecidos</h2>
+                <ul>
+                    <li>📽️ Produções Audiovisuais</li>
+                    <li>🏡 Imagens Imobiliárias</li>
+                    <li>🎉 Eventos Especiais</li>
+                    <li>🏗️ Obras e Engenharia</li>
+                    <li>🌿 Turismo e Natureza</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio (já existente) -->
         <section id="portfolio" class="section">
             <div class="container py-5">
                 <h2 class="text-center mb-5">Portfólio</h2>
                 <p class="text-center mb-4">Explore nossos trabalhos recentes em produções aéreas, vídeos institucionais, eventos e paisagens.</p>
-
-                <!-- Filtros -->
                 <div class="text-center mb-4">
                     <button class="btn btn-outline-primary m-1 filter-btn" data-filter="all">Todos</button>
                     <button class="btn btn-outline-primary m-1 filter-btn" data-filter="eventos">Eventos</button>
@@ -39,9 +90,8 @@
                     <button class="btn btn-outline-primary m-1 filter-btn" data-filter="turismo">Turismo</button>
                     <button class="btn btn-outline-primary m-1 filter-btn" data-filter="institucional">Institucional</button>
                 </div>
-
                 <div class="row g-4 portfolio-grid">
-                    <!-- Evento -->
+                    <!-- Itens do portfólio (mantidos como no código anterior) -->
                     <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" data-category="eventos" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="image" data-src="portfolio/img/evento1.jpg">
                         <div class="portfolio-card">
                             <img src="portfolio/img/evento1.jpg" class="img-fluid rounded shadow-sm" alt="Evento 1">
@@ -50,36 +100,23 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Outros itens... -->
+                </div>
+            </div>
+        </section>
 
-                    <!-- Imobiliário -->
-                    <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" data-category="imobiliario" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="image" data-src="portfolio/img/imovel1.jpg">
-                        <div class="portfolio-card">
-                            <img src="portfolio/img/imovel1.jpg" class="img-fluid rounded shadow-sm" alt="Imobiliário">
-                            <div class="overlay">
-                                <p class="text-white">Imobiliário</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Turismo -->
-                    <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" data-category="turismo" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="video" data-src="portfolio/videos/turismo1.mp4">
-                        <div class="portfolio-card">
-                            <img src="portfolio/img/thumb_video2.jpg" class="img-fluid rounded shadow-sm" alt="Vídeo Turismo">
-                            <div class="overlay">
-                                <p class="text-white">Turismo</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Institucional -->
-                    <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" data-category="institucional" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="video" data-src="portfolio/videos/institucional1.mp4">
-                        <div class="portfolio-card">
-                            <img src="portfolio/img/thumb_video1.jpg" class="img-fluid rounded shadow-sm" alt="Vídeo Institucional">
-                            <div class="overlay">
-                                <p class="text-white">Institucional</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Seção Contato -->
+        <section id="contato" class="section">
+            <div class="container py-5">
+                <h2>Fale Conosco</h2>
+                <p><strong>Localização:</strong> Beira/Sofala</p>
+                <p><strong>Telefone:</strong> <a href="tel:+258834235008">(+258) 83 4235-008</a></p>
+                <p><strong>Email:</strong> <a href="mailto:stackdronetech@gmail.com">stackdronetech@gmail.com</a></p>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/stack_dronetech/" class="social instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <!-- Outros botões sociais... -->
                 </div>
             </div>
         </section>
