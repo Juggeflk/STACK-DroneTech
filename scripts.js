@@ -1,55 +1,5 @@
- /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --bg: #f9f9f9;
-  --text: #333;
-  --primary: #0077cc;
-  --card: white;
-  --overlay: rgba(0, 0, 0, 0.7);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --text: #e0e0e0;
-    --primary: #1e90ff;
-    --card: #1e1e1e;
-    --overlay: rgba(0, 0, 0, 0.9);
-  }
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  padding: 20px;
-  line-height: 1.6;
-}
-
-header {
-  text-align: center;
-  background: linear-gradient(90deg, var(--primary), #1e90ff);
-  color: white;
-  padding: 30px 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  position: relative;
-}
-
-nav {
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style: none;
-  d…
-[04:17, 30/08/2025] Ssitoe: document.addEventListener('DOMContentLoaded', () => {
-    // Filtros
+document.addEventListener('DOMContentLoaded', () => {
+    // Filtros e Modal (código anterior mantido)
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -70,7 +20,6 @@ nav ul {
         });
     });
 
-    // Modal
     const portfolioModal = document.getElementById('portfolioModal');
     portfolioModal.addEventListener('show.bs.modal', (event) => {
         const button = event.relatedTarget;
@@ -102,5 +51,28 @@ nav ul {
         modalImage.src = '';
         modalVideoSource.src = '';
         modalVideo.pause();
+    });
+
+    // Destaque do link ativo na navegação
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 50) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
     });
 });
